@@ -1,0 +1,107 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deployment", "deployment", "{36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{47544E86-F20D-4796-8EAD-26B83477980F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C3F02319-CB6B-405F-AC45-74882EA82C1A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{661E01C4-B598-40E3-8786-3041C3F0059C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "apps", "apps", "{D06AF3CD-C7EB-426A-81D9-312B4F0C2555}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "geteweys", "geteweys", "{10DF2219-B9C7-4646-86C2-AEAD0AC13C1A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{27F45354-800D-4136-957F-F3F4704D3930}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{3F73136F-2024-4A6C-9A78-6611F7BE456A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChronoSekai.Shared.Contracts", "src\shared\ChronoSekai.Shared.Contracts\ChronoSekai.Shared.Contracts.csproj", "{331AF907-44FA-4440-BCD6-9B1D1759C46F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChronoSekai.Shared.Domain", "src\shared\ChronoSekai.Shared.Domain\ChronoSekai.Shared.Domain.csproj", "{0BEE89DE-92DA-4F4F-BD58-207B9DA3252D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StatusService", "StatusService", "{E65111AD-1599-45CD-A819-FF25154A4711}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChronoSekai.StatusService.API", "src\services\StatusService\ChronoSekai.StatusService.API\ChronoSekai.StatusService.API.csproj", "{CD4D91D6-E4D4-4DA8-9535-6C3379AD120D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChronoSekai.StatusService.Domain", "src\services\StatusService\ChronoSekai.StatusService.Domain\ChronoSekai.StatusService.Domain.csproj", "{09FE68A9-A3EB-4671-B419-1B5F9342218C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChronoSekai.StatusService.Infrastructure", "src\services\StatusService\ChronoSekai.StatusService.Infrastructure\ChronoSekai.StatusService.Infrastructure.csproj", "{026E562D-6D8B-4D69-A581-5673A269A85E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChronoSekai.StatusService.Application", "src\services\StatusService\ChronoSekai.StatusService.Application\ChronoSekai.StatusService.Application.csproj", "{219E40B8-BA8E-401F-AF0A-BAB2C63415D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChronoSekai.Shared.API.Infrastructure", "src\services\ChronoSekai.Shared.API.Infrastructure\ChronoSekai.Shared.API.Infrastructure.csproj", "{F3C4F34A-63DE-24E1-2C5F-A9D04E6D7A0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChronoSekai.Shared.API.Application", "src\services\ChronoSekai.Shared.API.Application\ChronoSekai.Shared.API.Application.csproj", "{A0B0DCC6-8137-43FE-8A1A-74FFCF218870}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChronoSekai.Shared.API", "src\services\ChronoSekai.Shared.API\ChronoSekai.Shared.API.csproj", "{2D928BA5-43B4-42A3-9139-5F7A16376BEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{331AF907-44FA-4440-BCD6-9B1D1759C46F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{331AF907-44FA-4440-BCD6-9B1D1759C46F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{331AF907-44FA-4440-BCD6-9B1D1759C46F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{331AF907-44FA-4440-BCD6-9B1D1759C46F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BEE89DE-92DA-4F4F-BD58-207B9DA3252D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BEE89DE-92DA-4F4F-BD58-207B9DA3252D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BEE89DE-92DA-4F4F-BD58-207B9DA3252D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BEE89DE-92DA-4F4F-BD58-207B9DA3252D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD4D91D6-E4D4-4DA8-9535-6C3379AD120D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD4D91D6-E4D4-4DA8-9535-6C3379AD120D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD4D91D6-E4D4-4DA8-9535-6C3379AD120D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD4D91D6-E4D4-4DA8-9535-6C3379AD120D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09FE68A9-A3EB-4671-B419-1B5F9342218C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09FE68A9-A3EB-4671-B419-1B5F9342218C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09FE68A9-A3EB-4671-B419-1B5F9342218C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09FE68A9-A3EB-4671-B419-1B5F9342218C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{026E562D-6D8B-4D69-A581-5673A269A85E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{026E562D-6D8B-4D69-A581-5673A269A85E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{026E562D-6D8B-4D69-A581-5673A269A85E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{026E562D-6D8B-4D69-A581-5673A269A85E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{219E40B8-BA8E-401F-AF0A-BAB2C63415D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{219E40B8-BA8E-401F-AF0A-BAB2C63415D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{219E40B8-BA8E-401F-AF0A-BAB2C63415D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{219E40B8-BA8E-401F-AF0A-BAB2C63415D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3C4F34A-63DE-24E1-2C5F-A9D04E6D7A0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3C4F34A-63DE-24E1-2C5F-A9D04E6D7A0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3C4F34A-63DE-24E1-2C5F-A9D04E6D7A0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3C4F34A-63DE-24E1-2C5F-A9D04E6D7A0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0B0DCC6-8137-43FE-8A1A-74FFCF218870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0B0DCC6-8137-43FE-8A1A-74FFCF218870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0B0DCC6-8137-43FE-8A1A-74FFCF218870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0B0DCC6-8137-43FE-8A1A-74FFCF218870}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D928BA5-43B4-42A3-9139-5F7A16376BEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D928BA5-43B4-42A3-9139-5F7A16376BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D928BA5-43B4-42A3-9139-5F7A16376BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D928BA5-43B4-42A3-9139-5F7A16376BEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D06AF3CD-C7EB-426A-81D9-312B4F0C2555} = {C3F02319-CB6B-405F-AC45-74882EA82C1A}
+		{10DF2219-B9C7-4646-86C2-AEAD0AC13C1A} = {C3F02319-CB6B-405F-AC45-74882EA82C1A}
+		{27F45354-800D-4136-957F-F3F4704D3930} = {C3F02319-CB6B-405F-AC45-74882EA82C1A}
+		{3F73136F-2024-4A6C-9A78-6611F7BE456A} = {C3F02319-CB6B-405F-AC45-74882EA82C1A}
+		{331AF907-44FA-4440-BCD6-9B1D1759C46F} = {3F73136F-2024-4A6C-9A78-6611F7BE456A}
+		{0BEE89DE-92DA-4F4F-BD58-207B9DA3252D} = {3F73136F-2024-4A6C-9A78-6611F7BE456A}
+		{E65111AD-1599-45CD-A819-FF25154A4711} = {27F45354-800D-4136-957F-F3F4704D3930}
+		{CD4D91D6-E4D4-4DA8-9535-6C3379AD120D} = {E65111AD-1599-45CD-A819-FF25154A4711}
+		{09FE68A9-A3EB-4671-B419-1B5F9342218C} = {E65111AD-1599-45CD-A819-FF25154A4711}
+		{026E562D-6D8B-4D69-A581-5673A269A85E} = {E65111AD-1599-45CD-A819-FF25154A4711}
+		{219E40B8-BA8E-401F-AF0A-BAB2C63415D9} = {E65111AD-1599-45CD-A819-FF25154A4711}
+		{F3C4F34A-63DE-24E1-2C5F-A9D04E6D7A0E} = {27F45354-800D-4136-957F-F3F4704D3930}
+		{A0B0DCC6-8137-43FE-8A1A-74FFCF218870} = {27F45354-800D-4136-957F-F3F4704D3930}
+		{2D928BA5-43B4-42A3-9139-5F7A16376BEE} = {27F45354-800D-4136-957F-F3F4704D3930}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41A56E8B-FEB6-431D-82D4-C815A37CA992}
+	EndGlobalSection
+EndGlobal
