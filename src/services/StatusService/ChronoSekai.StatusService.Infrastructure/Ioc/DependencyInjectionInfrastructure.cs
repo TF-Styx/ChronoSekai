@@ -20,6 +20,7 @@ namespace ChronoSekai.StatusService.Infrastructure.Ioc
             });
 
             services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<StatusDbContext>());
+
             services.AddScoped<IStatusTitleRepository, StatusTitleRepository>();
             services.AddScoped<IStatusTranslateRepository, StatusTranslateRepository>();
             services.AddScoped<ITypeTitleRepository, TypeTitleRepository>();

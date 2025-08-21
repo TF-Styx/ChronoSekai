@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>23d01456-b62f-4a0d-b26e-5fc0490d3928</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ChronoSekai.Shared.API\ChronoSekai.Shared.API.csproj" />
+    <ProjectReference Include="..\ChronoSekai.AttributeService.Application\ChronoSekai.AttributeService.Application.csproj" />
+    <ProjectReference Include="..\ChronoSekai.AttributeService.Domain\ChronoSekai.AttributeService.Domain.csproj" />
+    <ProjectReference Include="..\ChronoSekai.AttributeService.Infrastructure\ChronoSekai.AttributeService.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
