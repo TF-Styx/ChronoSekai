@@ -1,12 +1,9 @@
 ﻿using ChronoSekai.Shared.API;
 using ChronoSekai.StatusService.API.Models.Request.StatusTranslateRequest;
-using ChronoSekai.StatusService.API.Models.Request.TypeTitleRequest;
-using ChronoSekai.StatusService.Application.Features.StatusTitles.GetAll;
 using ChronoSekai.StatusService.Application.Features.StatusTranslates.Create;
 using ChronoSekai.StatusService.Application.Features.StatusTranslates.Delete;
 using ChronoSekai.StatusService.Application.Features.StatusTranslates.GetAll;
 using ChronoSekai.StatusService.Application.Features.StatusTranslates.Update;
-using ChronoSekai.StatusService.Application.Features.TypeTitles.Update;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

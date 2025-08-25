@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Список 'тип тайтла'";
+    // Указываем, какой макет использовать для этой страницы
+    Layout = "~/Views/Shared/_StatusesLayout.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<!-- Место, куда JavaScript будет вставлять данные -->
+<div id="products-container" class="mt-4">
+    <h2>Список продуктов</h2>
+    <p>Загрузка...</p>
+</div>
+
+@section Scripts
+{
+    <script src="~/js/type-title.js"></script>
+}
