@@ -1,6 +1,8 @@
 ﻿using ChronoSekai.AttributeService.API.Models.Request.PublisherRequest;
+using ChronoSekai.AttributeService.Application.Features.Genres.GetAll;
 using ChronoSekai.AttributeService.Application.Features.Publishers.Create;
 using ChronoSekai.AttributeService.Application.Features.Publishers.Delete;
+using ChronoSekai.AttributeService.Application.Features.Publishers.GetAll;
 using ChronoSekai.AttributeService.Application.Features.Publishers.Update;
 using ChronoSekai.Shared.API;
 using MediatR;
@@ -26,6 +28,16 @@ namespace ChronoSekai.AttributeService.API.Controllers
                     onSuccess: () => Ok(result.Value),
                     onFailure: errors => SwitchResult(errors.FirstOrDefault()!)
                 );
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAll(CancellationToken cancellationToken)
+        {
+            var command = new GetAllPublisherQuery();
+
+            var result = await _mediator.Send(command, cancellationToken);
+
+            return Ok(result);
         }
 
         [HttpPut("{id}/update-name")]
