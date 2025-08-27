@@ -8,19 +8,19 @@
         <h5 class="mb-3">Атрибуты</h5>
         <ul class="navbar-nav flex-grow-1">
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-controller="Attributes" asp-action="Publisher">Издатели</a>
+                <a class="nav-link text-dark @IsActive("Attributes", "Publisher")" asp-controller="Attributes" asp-action="Publisher">Издатели</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-controller="Attributes" asp-action="Author">Авторы</a>
+                <a class="nav-link text-dark @IsActive("Attributes", "Author")" asp-controller="Attributes" asp-action="Author">Авторы</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-controller="Attributes" asp-action="Artist">Художники</a>
+                <a class="nav-link text-dark @IsActive("Attributes", "Artist")" asp-controller="Attributes" asp-action="Artist">Художники</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-controller="Attributes" asp-action="Genre">Жанры</a>
+                <a class="nav-link text-dark @IsActive("Attributes", "Genre")" asp-controller="Attributes" asp-action="Genre">Жанры</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-controller="Attributes" asp-action="Tag">Тэги</a>
+                <a class="nav-link text-dark @IsActive("Attributes", "Tag")" asp-controller="Attributes" asp-action="Tag">Тэги</a>
             </li>
         </ul>
     </nav>
@@ -34,3 +34,20 @@
 </div>
 
 @await RenderSectionAsync("Scripts", required: false)
+
+@functions {
+    // Новая, улучшенная функция
+    string IsActive(string controller, string action)
+    {
+        string currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+        string currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+
+        // Возвращаем "active", только если И контроллер, И действие совпадают
+        if (controller.Equals(currentController, StringComparison.OrdinalIgnoreCase) &&
+            action.Equals(currentAction, StringComparison.OrdinalIgnoreCase))
+        {
+            return "active";
+        }
+        return "";
+    }
+}

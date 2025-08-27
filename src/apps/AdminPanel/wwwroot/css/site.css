@@ -42,8 +42,15 @@ body
 
 
 
-/* --- Стили для макета с боковым меню --- */
+/* --- Стили для активного пункта в ВЕРХНЕМ меню (header) --- */
+.navbar-nav .nav-item .nav-link.active {
+    font-weight: 600; /* Делаем текст жирнее */
+    color: #0d6efd !important; /* Делаем цвет синим (стандартный цвет Bootstrap) */
+    border-bottom: 3px solid #0d6efd;
+}
 
+
+/* --- Стили для макета с боковым меню --- */
 .main-wrapper {
     display: flex; /* Включаем Flexbox */
     /* Высчитываем высоту, чтобы макет занимал весь экран до подвала */
@@ -75,6 +82,8 @@ body
     border-radius: 5px;
 }
 
-.left-menu .nav-link:hover {
+nav.left-menu ul .nav-item a.nav-link:hover,
+nav.left-menu ul .nav-item a.nav-link.active {
     background-color: #e9ecef;
+    color: #000;
 }

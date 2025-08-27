@@ -1,4 +1,0 @@
-﻿namespace ChronoSekai.AttributeService.API.Models.Request.TagRequest
-{
-    public sealed record DeleteTagRequest(int Id);
-}

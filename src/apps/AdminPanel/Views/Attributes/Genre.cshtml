@@ -1,10 +1,10 @@
 ﻿@{
-    ViewData["Title"] = "Список 'статус перевода'";
+    ViewData["Title"] = "Жанры";
     // Указываем, какой макет использовать для этой страницы
     Layout = "~/Views/Shared/_AttributesLayout.cshtml";
 }
 
-<h1>@ViewData["Title"]</h1>
+@* <h1>@ViewData["Title"]</h1> *@
 
 <!-- Место, куда JavaScript будет вставлять данные -->
 <div id="products-container" class="mt-4">
@@ -12,7 +12,24 @@
     <p>Загрузка...</p>
 </div>
 
+@* @section Scripts
+{
+    <script src="~/js/AttributesJS/genre.js"></script>
+} *@
+
 @section Scripts
 {
-    <script src="~/js/genre.js"></script>
+    <!-- 1. Подключаем наш ОБЩИЙ скрипт -->
+    <script src="~/js/admin-crud-table.js"></script>
+
+    <!-- 2. Вызываем его с параметрами для "Авторов" -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            App.initializeCrudTable({
+                containerId: 'products-container',
+                apiEndpoint: '/api/admin-genre',
+                entityTitle: 'Жанры'
+            });
+        });
+    </script>
 }

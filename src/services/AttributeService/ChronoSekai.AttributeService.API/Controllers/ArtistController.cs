@@ -1,10 +1,10 @@
-﻿using ChronoSekai.AttributeService.API.Models.Request.ArtistRequest;
-using ChronoSekai.AttributeService.Application.Features.Artists.Create;
+﻿using ChronoSekai.AttributeService.Application.Features.Artists.Create;
 using ChronoSekai.AttributeService.Application.Features.Artists.Delete;
 using ChronoSekai.AttributeService.Application.Features.Artists.GetAll;
 using ChronoSekai.AttributeService.Application.Features.Artists.Update;
 using ChronoSekai.AttributeService.Application.Features.Genres.GetAll;
 using ChronoSekai.Shared.API;
+using ChronoSekai.Shared.Contracts.AttributeRequest.ArtistRequest;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

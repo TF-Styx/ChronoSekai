@@ -1,5 +1,5 @@
 ﻿using ChronoSekai.Shared.API;
-using ChronoSekai.StatusService.API.Models.Request.StatusTitleRequest;
+using ChronoSekai.Shared.Contracts.StatusRequest.StatusTitleRequest;
 using ChronoSekai.StatusService.Application.Features.StatusTitles.Create;
 using ChronoSekai.StatusService.Application.Features.StatusTitles.Delete;
 using ChronoSekai.StatusService.Application.Features.StatusTitles.GetAll;

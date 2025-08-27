@@ -1,9 +1,9 @@
-﻿using ChronoSekai.AttributeService.API.Models.Request.TagRequest;
-using ChronoSekai.AttributeService.Application.Features.Tags.Create;
+﻿using ChronoSekai.AttributeService.Application.Features.Tags.Create;
 using ChronoSekai.AttributeService.Application.Features.Tags.Delete;
 using ChronoSekai.AttributeService.Application.Features.Tags.GetAll;
 using ChronoSekai.AttributeService.Application.Features.Tags.Update;
 using ChronoSekai.Shared.API;
+using ChronoSekai.Shared.Contracts.AttributeRequest.TagRequest;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

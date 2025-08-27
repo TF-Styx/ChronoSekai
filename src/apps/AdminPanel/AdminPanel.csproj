@@ -14,7 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\services\ChronoSekai.Shared.API\ChronoSekai.Shared.API.csproj" />
     <ProjectReference Include="..\..\shared\ChronoSekai.Shared.Contracts\ChronoSekai.Shared.Contracts.csproj" />
+    <ProjectReference Include="..\..\shared\ChronoSekai.Shared.Domain\ChronoSekai.Shared.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,5 @@
 ﻿using ChronoSekai.Shared.API;
-using ChronoSekai.StatusService.API.Models.Request.StatusTranslateRequest;
+using ChronoSekai.Shared.Contracts.StatusRequest.StatusTranslateRequest;
 using ChronoSekai.StatusService.Application.Features.StatusTranslates.Create;
 using ChronoSekai.StatusService.Application.Features.StatusTranslates.Delete;
 using ChronoSekai.StatusService.Application.Features.StatusTranslates.GetAll;

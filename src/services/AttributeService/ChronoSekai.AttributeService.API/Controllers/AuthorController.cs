@@ -1,10 +1,10 @@
-﻿using ChronoSekai.AttributeService.API.Models.Request.AuthorRequest;
-using ChronoSekai.AttributeService.Application.Features.Authors.Create;
+﻿using ChronoSekai.AttributeService.Application.Features.Authors.Create;
 using ChronoSekai.AttributeService.Application.Features.Authors.Delete;
 using ChronoSekai.AttributeService.Application.Features.Authors.GetAll;
 using ChronoSekai.AttributeService.Application.Features.Authors.Update;
 using ChronoSekai.AttributeService.Application.Features.Genres.GetAll;
 using ChronoSekai.Shared.API;
+using ChronoSekai.Shared.Contracts.AttributeRequest.AuthorRequest;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

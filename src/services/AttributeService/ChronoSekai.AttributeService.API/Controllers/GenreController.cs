@@ -1,9 +1,9 @@
-﻿using ChronoSekai.AttributeService.API.Models.Request.GenreRequest;
-using ChronoSekai.AttributeService.Application.Features.Genres.Create;
+﻿using ChronoSekai.AttributeService.Application.Features.Genres.Create;
 using ChronoSekai.AttributeService.Application.Features.Genres.Delete;
 using ChronoSekai.AttributeService.Application.Features.Genres.GetAll;
 using ChronoSekai.AttributeService.Application.Features.Genres.Update;
 using ChronoSekai.Shared.API;
+using ChronoSekai.Shared.Contracts.AttributeRequest.GenreRequest;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

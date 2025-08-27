@@ -21,10 +21,10 @@
                     <ul class="navbar-nav flex-grow-1">
                         <!-- ОСНОВНЫЕ РАЗДЕЛЫ АДМИНКИ -->
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Statuses" asp-action="StatusTitle">Статусы</a>
+                            <a class="nav-link text-dark @IsActive("Statuses"/* , "TypeTitle", "StatusTitle", "StatusTranslate" */)" asp-controller="Statuses" asp-action="StatusTitle">Статусы</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Attributes" asp-action="Artist">Атрибуты</a>
+                            <a class="nav-link text-dark @IsActive("Attributes"/* , "Publisher", "Author", "Artist", "Genre", "Tag" */)" asp-controller="Attributes" asp-action="Artist">Атрибуты</a>
                         </li>
                     </ul>
                 </div>
@@ -46,5 +46,80 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
+
+    @functions {
+        // Эта функция будет работать для верхнего меню.
+        // Она принимает ОДНО или НЕСКОЛЬКО имен контроллеров.
+        string IsActive(params string[] controllers)
+        {
+            string currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+
+            // Используем Linq для проверки, содержится ли текущий контроллер в списке переданных
+            if (currentController != null && controllers.Contains(currentController, StringComparer.OrdinalIgnoreCase))
+            {
+                return "active";
+            }
+            return "";
+        }
+    }
+
+    <!-- ==================================================== -->
+    <!-- МОДАЛЬНОЕ ОКНО ДЛЯ ДОБАВЛЕНИЯ/РЕДАКТИРОВАНИЯ -->
+    <!-- ==================================================== -->
+    <div class="modal fade" id="addEntityModal" tabindex="-1" aria-labelledby="addEntityModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addEntityModalLabel">Добавить новый элемент</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Форма для ввода данных -->
+                    <form id="addEntityForm">
+                        <!-- Скрытое поле для ID (понадобится для редактирования) -->
+                        <input type="hidden" id="entityId">
+
+                        <div class="mb-3">
+                            <label for="entityName" class="form-label">Название</label>
+                            <input type="text" class="form-control" id="entityName" required>
+                        </div>
+
+                        <!-- Здесь можно добавить другие поля, если они нужны -->
+                        <!-- Место для вывода ошибок -->
+                        <div id="modalError" class="alert alert-danger" style="display: none;"></div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="button" class="btn btn-primary" id="saveEntityBtn">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================================================== -->
+    <!-- МОДАЛЬНОЕ ОКНО ДЛЯ ПОДТВЕРЖДЕНИЯ УДАЛЕНИЯ -->
+    <!-- ==================================================== -->
+    <div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-labelledby="deleteConfirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteConfirmModalLabel">Подтверждение удаления</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="deleteConfirmText">Вы уверены, что хотите удалить этот элемент?</p>
+                    <!-- Место для вывода ошибок -->
+                    <div id="deleteModalError" class="alert alert-danger" style="display: none;"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <!-- Эта кнопка будет красной для акцента на опасном действии -->
+                    <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Удалить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

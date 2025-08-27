@@ -8,13 +8,13 @@
         <h5 class="mb-3">Статусы</h5>
         <ul class="navbar-nav flex-grow-1">
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-controller="Statuses" asp-action="TypeTitle">Тип тайтла</a>
+                <a class="nav-link text-dark @IsActive("Statuses", "TypeTitle")" asp-controller="Statuses" asp-action="TypeTitle">Тип тайтла</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-controller="Statuses" asp-action="StatusTitle">Статус тайтла</a>
+                <a class="nav-link text-dark @IsActive("Statuses", "StatusTitle")" asp-controller="Statuses" asp-action="StatusTitle">Статус тайтла</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-controller="Statuses" asp-action="StatusTranslate">Статус перевода</a>
+                <a class="nav-link text-dark @IsActive("Statuses", "StatusTranslate")" asp-controller="Statuses" asp-action="StatusTranslate">Статус перевода</a>
             </li>
         </ul>
     </nav>
@@ -28,3 +28,20 @@
 </div>
 
 @await RenderSectionAsync("Scripts", required: false)
+
+@functions {
+    // Новая, улучшенная функция
+    string IsActive(string controller, string action)
+    {
+        string currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+        string currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+
+        // Возвращаем "active", только если И контроллер, И действие совпадают
+        if (controller.Equals(currentController, StringComparison.OrdinalIgnoreCase) &&
+            action.Equals(currentAction, StringComparison.OrdinalIgnoreCase))
+        {
+            return "active";
+        }
+        return "";
+    }
+}
